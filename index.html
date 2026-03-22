@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>9ezEsports - CS2</title>
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="logo">9ezEsports</div>
+    <nav class="nav" id="mainNav">
+      <a href="matches.html" class="nav-link">Матчи</a>
+      <a href="achievements.html" class="nav-link">Достижения</a>
+      <a href="roster.html" class="nav-link">Состав</a>
+      <a href="info.html" class="nav-link">Инфо</a>
+    </nav>
+    <button class="theme-toggle" id="themeToggle" aria-label="Переключить тему">🌙</button>
+  </header>
+
+  <main class="container">
+    <!-- Блоки контента будут загружаться по страницам -->
+    <section class="hero">
+      <h1 class="title">9ezEsports</h1>
+      <p class="subtitle">Киберспорт команда по CS2. Агрессивная эстетика. Чистый и современный дизайн.</p>
+      <button class="cta glow" onclick="navigateTo('matches.html')">Посмотреть матчи</button>
+    </section>
+
+    <!-- Быстрые карточки -->
+    <section class="cards" id="quickCards">
+      <!-- карточки генерируются скриптом -->
+    </section>
+  </main>
+
+  <script src="js/theme.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
