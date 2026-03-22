@@ -35,5 +35,100 @@
 
   <script src="js/theme.js"></script>
   <script src="js/main.js"></script>
+  <!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>9ezEsports - CS2</title>
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="logo">
+      <img src="assets/logo/logo.png" alt="9ezEsports логотип" class="logo-img" />
+      9ezEsports
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Открыть навигацию">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav" id="mainNav">
+      <a href="matches.html" class="nav-link">Матчи</a>
+      <a href="achievements.html" class="nav-link">Достижения</a>
+      <a href="roster.html" class="nav-link">Состав</a>
+      <a href="info.html" class="nav-link">Инфо</a>
+    </nav>
+    <button class="theme-toggle" id="themeToggle" aria-label="Переключить тему">🌙</button>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1 class="title"><span class="accent">9ezEsports</span></h1>
+      <p class="subtitle">CS2 — темная эстетика, агрессивный стиль, актуальная команда.</p>
+      <button class="cta glow" onclick="navigateTo('matches.html')">Посмотреть матчи</button>
+    </section>
+
+    <section class="cards" id="quickCards" aria-label="Быстрые карточки матчей"></section>
+  </main>
+
+  <script src="js/theme.js"></script>
+  <script src="js/main.js"></script>
+  <!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <title>Состав - 9ezEsports</title>
+  <link rel="stylesheet" href="../css/variables.css" />
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="logo"><img src="../assets/logo/logo.png" alt="логотип" class="logo-img">9ezEsports</div>
+    <button class="hamburger" id="hamburger2" aria-label="Открыть навигацию">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav" id="mainNav2">
+      <a href="matches.html" class="nav-link">Матчи</a>
+      <a href="achievements.html" class="nav-link">Достижения</a>
+      <a href="roster.html" class="nav-link">Состав</a>
+      <a href="info.html" class="nav-link">Инфо</a>
+    </nav>
+    <button class="theme-toggle" id="themeToggle2" aria-label="Переключить тему">🌙</button>
+  </header>
+
+  <main class="container">
+    <h2 class="section-title">Состав</h2>
+    <div class="cards" id="rosterGrid"></div>
+  </main>
+
+  <script src="../js/theme.js"></script>
+  <script src="../js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const roster = [
+        { name: 'xinto', role: 'entry fragger', img: '../assets/players/xinto.png' },
+        { name: 'ba7ka', role: 'IGL', img: '../assets/players/ba7ka.png' },
+        { name: 'kaze', role: 'sniper', img: '../assets/players/kaze.png' },
+        { name: 'mef0mu', role: 'rifler', img: '../assets/players/mef0mu.png' },
+        { name: 'blitzn0n', role: 'lurker', img: '../assets/players/blitzn0n.png' },
+      ];
+      const grid = document.getElementById('rosterGrid');
+      roster.forEach(p => {
+        const card = document.createElement('div');
+        card.className = 'card';
+        card.innerHTML = `
+          <div style="display:flex;align-items:center;gap:12px;">
+            <img src="${p.img}" alt="${p.name}" style="width:48px;height:48px;border-radius:50%;object-fit:cover;">
+            <div>
+              <h3>${p.name}</h3>
+              <p style="margin:0;color:var(--muted);font-size:14px;">${p.role}</p>
+            </div>
+          </div>
+        `;
+        grid.appendChild(card);
+      });
+    });
+  </script>
 </body>
 </html>
